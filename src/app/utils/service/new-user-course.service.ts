@@ -11,7 +11,7 @@ export class NewUserCourseService {
   userCourses: any[] = [];
   showCourses: any[] = [];
   userID = 1;
-  newCoursesInfo = [];
+  newCoursesInfo: any = [];
 
   constructor(private UserCourseService: UserCoursesService, 
     private CourseService : CoursesService,
@@ -58,34 +58,35 @@ export class NewUserCourseService {
       });
     
     // push course information to newCoursesInfo array
-    // this.newCoursesInfo.push({
-    //   title: course.title,
-    //   id: course.id,
-    //   imageSrc: course.imageSrc,
-    //   progress: progress,
-    //   totalChapters: course.totalChapters,
-    //   totalTopics: course.chapters.reduce((total, chapter) => total + chapter.topics.length, 0),
-    //   totalAssignments: course.totalAssignments,
-    //   purchased: purchased,
-    //   chapters: course.chapters.map(chapter => ({
-    //     id: chapter.id,
-    //     topics: chapter.topics.map(topic => ({
-    //       id: topic.id,
-    //       title: topic.title,
-    //       description: topic.description,
-    //       url: topic.url,
-    //       mediatype: topic.mediatype,
-    //       mediaTime: topic['media-time'], 
-    //       assignments: topic.assignments
-    //     }))
-    //   }))
-    // });
+    this.newCoursesInfo.push({
+      title: course.title,
+      id: course.id,
+      imageSrc: course.imageSrc,
+      progress: progress,
+      totalChapters: course.totalChapters,
+      // totalTopics: course.chapters.reduce((total, chapter) => total + chapter.topics.length, 0),
+      totalTopics: [],
+      totalAssignments: course.totalAssignments,
+      purchased: purchased,
+      chapters: course.chapters.map((chapter: any) => ({
+        id: chapter.id,
+        topics: chapter.topics.map((topic: any) => ({
+          id: topic.id,
+          title: topic.title,
+          description: topic.description,
+          url: topic.url,
+          mediatype: topic.mediatype,
+          mediaTime: topic['media-time'], 
+          assignments: topic.assignments
+        }))
+      }))
+    });
   });
 
     // sort newCoursesInfo array with purchased courses appearing first
-    this.newCoursesInfo.sort((a, b) => {
-      // if (a.purchased && !b.purchased) return -1;
-      // if (!a.purchased && b.purchased) return 1;
+    this.newCoursesInfo.sort((a: any, b: any) => {
+      if (a.purchased && !b.purchased) return -1;
+      if (!a.purchased && b.purchased) return 1;
       return 0;
     });
 

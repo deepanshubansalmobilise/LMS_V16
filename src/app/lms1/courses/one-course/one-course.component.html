@@ -33,7 +33,7 @@
                       <div [id]="'collapse' + chapter.id" class="accordion-collapse collapse" [ngClass]="{'show': i === 0}" data-bs-parent="#accordionExample">
                           <div class="accordion-body">
                               <ng-container *ngFor="let topic of chapter.topics; let j = index">
-                                  <div class="row" (click)="showCourseChapter(i + 1, j + 1, topic.title)">
+                                  <div class="row" (click)="showCourseChapter(i + 1, j + 1, topic)">
                                       <div class="col-1 px-2">
                                           <img *ngIf="topic.assignments > 0" src="assets/img/oneCourse/section_completed.svg" class="tick_img" alt=""/>
                                       </div>

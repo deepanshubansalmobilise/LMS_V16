@@ -36,8 +36,8 @@ export class OneCourseComponent {
     });
   }
 
-  showCourseChapter(chapterNumber: number, topicNumber: number, topicTitle: string) {
-    this.selectedChapter = `${chapterNumber}.${topicNumber}: ${topicTitle}`;
+  showCourseChapter(chapterNumber: number, topicNumber: number, data: any) {
+    this.selectedChapter = `${chapterNumber}.${topicNumber}: ${data.title}`;
 }
 
   handleCourseInfo() {
