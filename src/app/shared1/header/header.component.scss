@@ -1,0 +1,18 @@
+.headerLMS{
+    color: #11031B;
+
+    .navbar{
+        border-bottom: 0.5px solid #D4D4E1;
+        background: #FFF;
+
+        .dropdown{
+            border-radius: 8px;
+            padding: 4px 10px;
+            background: #EEE;
+
+            .btn{
+                font-weight: 500;
+            }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+<div class="page-wrapper">
+    <div class="container">
+    <h1>Resources</h1>
+    <h4>Create new</h4>
+    <div class="d-flex">
+        <p class="me-3">New Resource</p>
+        <p>Create Quiz</p>
+    </div>
+    <h3>Recent Resources</h3>
+
+    <div class="row">
+        <div class="col-xl-3">
+            <p>30</p>
+            <h5>Total Resources</h5>
+        </div>
+        <div class="col-xl-3">
+            <p>11</p>
+            <h5>Audio</h5>
+        </div>
+        <div class="col-xl-3">
+            <p>5</p>
+            <h5>Video</h5>
+        </div>
+        <div class="col-xl-3">
+            <p>12</p>
+            <h5>PDF</h5>
+        </div>
+        <div class="col-xl-3">
+            <p>2</p>
+            <h5>ZIP file</h5>
+        </div>
+    </div>
+
+    <ul class="nav nav-underline">
+        <li class="nav-item">
+          <a class="nav-link" (click)="showTable('all')">All</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="showTable('published')">Published</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="showTable('draft')">Draft</a>
+        </li>
+    </ul>
+
+      <table class="table bg-white"  *ngIf="selectedOption === 'all'">
+        <thead>
+          <tr>
+            <th scope="col">Resources</th>
+            <th scope="col">Type</th>
+            <th scope="col">Last Modified</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table bg-white"  *ngIf="selectedOption === 'published'">
+        <thead>
+          <tr>
+            <th scope="col">Resources</th>
+            <th scope="col">Type</th>
+            <th scope="col">Last Modified</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table bg-white"  *ngIf="selectedOption === 'draft'">
+        <thead>
+          <tr>
+            <th scope="col">Resources</th>
+            <th scope="col">Type</th>
+            <th scope="col">Last Modified</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>

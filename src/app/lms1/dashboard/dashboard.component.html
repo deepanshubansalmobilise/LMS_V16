@@ -1,0 +1,159 @@
+<div class="lms1-wrapper">
+    <div class="container ">
+        <div class="row">
+          <div class="col-xl-9">
+            <h1 class="mb-1 client_name">Hi, Deepanshu</h1>
+            <p class="mb-3 learn_new">Let's learn something new today!</p>
+            <div class="row">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-xl-8">
+                    <div class="row">
+                      <div class="col-xl-6 mb-2">
+                        <div class="mb-3 p-3 widges">
+                          <h3 class="mb-2 no_of_course">24</h3>
+                          <img src="assets/lms1/to-do-course.svg" alt=""/>
+                          <span class="ml-2 to_do">To-do Courses</span>
+                        </div>
+                      </div>
+                      <div class="col-xl-6 mb-2">
+                        <div class="mb-3 p-3 widges">
+                          <h3 class="mb-2 no_of_course">12</h3>
+                          <img src="assets/lms1/to-do-course.svg" alt=""/>
+                          <span class="ml-2 to_do">Forum Discussions</span>
+                        </div>
+                      </div>
+                      <div class="col-xl-6 mb-2">
+                        <div class="mb-3 p-3 widges">
+                          <h3 class="mb-2 no_of_course">4</h3>
+                          <img src="assets/lms1/certi.svg" alt=""/>
+                          <span class="ml-2 to_do">Certificates Earned</span>
+                        </div>
+                      </div>
+                      <div class="col-xl-6 mb-2">
+                        <div class="mb-3 p-3 widges">
+                          <h3 class="mb-2 no_of_course">2</h3>
+                          <img src="assets/lms1/progress.svg" alt=""/>
+                          <span class="ml-2 to_do">In-progress Courses</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-4">
+                    <div class="mb-3 p-3 widges">
+                      <div class="mb-4 d-flex flex-column">
+                        <h3 class="mb-1 widges_heading">Certificate</h3>
+                        <p class="latest_certi">Your latest certificates</p>
+                      </div>
+                      <img class="d-block" src="assets/lms1/certificate.svg" alt=""/>
+                      <button class="btn-primary btn mb-2 mt-4">View All</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-xl-8 mb-2">
+                    <div class="px-3 pt-3 pb-0 widges">
+                      <h2 class="mb-1 widges_heading">Time Spendings</h2>
+                      <div>
+                        <!-- <chart type="line" [options]="mixedChartOptions" [series]="mixedChartData" class="chart"></chart> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 mb-2">
+                    <div class="p-3 widges">
+                      <h2 class="mb-1 widges_heading">Statistics</h2>
+                      <div>
+                        <!-- <chart type="donut" [height]="'300'" [options]="pieChartOptions" [series]="pieChartSeries"></chart> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="p-3 widges">
+                  <h3 class="mb-3 widges_heading">Continue Learning</h3>
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="tabs-anchor_tag" href="#">Courses</a>
+                    </li>
+                    <li class="nav-item" >
+                      <a class="tabs-anchor_tag_center"  href="#">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="tabs-anchor_tag" href="#">Activity</a>
+                    </li>
+                  </ul>
+                  <div class="row">
+                    <div class="col-12">
+                      <div *ngFor="let course of newCoursesInfo" class="border-styles w-100 d-flex align-items-center p-3" >
+                        <ng-container *ngIf="course.purchased">
+                          <img src="{{course.imageSrc}}" alt="img not found" />
+                        <div class="ml-4 mr-auto">
+                          <p class="mb-2 course-owned-name">{{course.title}}</p>
+                          <div class="mb-2 d-flex align-items-center">
+                            <p class="mb-0 mr-2 chapters">{{course.totalChapters}} Chapters</p>
+                            <p class="mb-0 mr-2 chapters">{{course.totalTopics}} Quizzes</p>
+                            <p class="mb-0 chapters">{{course.totalAssignments}} Assignments</p>
+                          </div>
+                          <div>
+                            <div class="progress">
+                              <div class="progress-bar rounded-pill" [style.width.%]="course.progress"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="btn btn-primary">Continue</button>
+                        </ng-container>
+                      </div>
+                      
+                      
+                    </div>
+                    <div class="mt-3 px-3">
+                      <button class="btn btn-primary">View All</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3">
+            <div class="bg-white h-100">
+                <!-- <div class="">
+                    <full-calendar [options]="calendarOptions"></full-calendar>
+                  </div> -->
+              <!-- <div class="p-3" *ngFor="let data of calenderData">
+                <ng-container *ngIf="data.date === todayDate">
+                  <p class="mb-2">Date: {{ data.date }}</p>
+                  <h1 class="course_for_day">{{ data.course.courseName }}</h1>
+                  <p class="course_summary">{{ data.course.courseDes }}</p>
+                  <img src="assets/lms1/one-certi.svg" alt="" />
+                  <span class="ml-2">{{ data.course.coursesubDes }}</span>
+                  <div class="d-flex align-items-start mt-4">
+                    <img class="mt-1" src="assets/lms1/duration.svg" alt="" />
+                    <div class="ml-3">
+                      <p class="mb-0">{{ data.course.courseDuration }}</p>
+                      <p class="time_duration">Duration</p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start mt-3">
+                    <img class="mt-1" src="assets/lms1/lessons.svg" alt="" />
+                    <div class="ml-3">
+                      <p class="mb-0">{{ data.course.courseContent }}</p>
+                      <p class="time_duration">Course Content</p>
+                    </div>
+                  </div>
+                  <hr class="mt-4" />
+                  <div class="d-flex justify-content-evenly">
+                    <button class="btn btn-secondary">Start Course</button>
+                    <button class="btn btn-primary">Reschedule</button>
+                  </div>
+                </ng-container>
+              </div> -->
+              
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+  

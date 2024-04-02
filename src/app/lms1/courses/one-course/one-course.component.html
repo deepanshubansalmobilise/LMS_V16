@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xl-8">
+      <div class="d-flex mb-3 align-items-center">
+        <a routerLink="/dashboard/courses" class="mb-0 course">Courses</a>
+        <br />
+        <p class="ms-2 mb-0 course_name"> / {{ modifiedCoursesInfo?.['title'] }}</p>
+      </div>
+      <h1 class="topic_title">{{ selectedChapter }}</h1>
+      <div>
+        <iframe width="716" height="403" src="https://www.youtube.com/embed/JvPV5sYlw7c?si=MphMKt3l0kLNgfVF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    
+    </div>
+    <div class="col-xl-4">
+      <div class="py-4 px-3 bg_white">
+          <h2 class="mb-3 side_head">{{ modifiedCoursesInfo?.['title'] }}</h2>
+          <div class="mb-3 w-100 d-flex align-items-center">
+              <p class="me-auto mb-0 progress_report">{{ modifiedCoursesInfo?.['progress'] }}/{{ modifiedCoursesInfo?.['totalChapters'] }} COMPLETED</p>
+              <img [src]="modifiedCoursesInfo?.['imageSrc']" alt="" />
+          </div>
+          <div class="progress h-5px progress-bar">
+              <div class="progress-bar rounded-pill completed-progress" role="progressbar" [style.width.%]="(modifiedCoursesInfo?.['progress'] / modifiedCoursesInfo?.['totalChapters']) * 100"></div>
+          </div>
+          <div class="accordion" id="accordionExample">
+              <ng-container *ngFor="let chapter of modifiedCoursesInfo?.['chapters']; let i = index">
+                  <div class="accordion-item">
+                      <h2 class="accordion-header">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + chapter.id" [attr.aria-controls]="'collapse' + chapter.id">
+                              Chapter {{ i + 1 }}
+                          </button>
+                      </h2>
+                      <div [id]="'collapse' + chapter.id" class="accordion-collapse collapse" [ngClass]="{'show': i === 0}" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                              <ng-container *ngFor="let topic of chapter.topics; let j = index">
+                                  <div class="row" (click)="showCourseChapter(i + 1, j + 1, topic.title)">
+                                      <div class="col-1 px-2">
+                                          <img *ngIf="topic.assignments > 0" src="assets/img/oneCourse/section_completed.svg" class="tick_img" alt=""/>
+                                      </div>
+                                      <div class="col-11 px-4">
+                                          <h3 class="course_chapter">{{ i + 1 }}.{{ j + 1 }}: {{ topic.title }}</h3>
+                                          <p class="mb-3 mt-3 course_details">
+                                              {{ topic.description }}
+                                          </p>
+                                          <span class="course_time">{{ topic.mediaTime }}</span> 
+                                      </div>
+                                  </div>
+                              </ng-container>
+                          </div>
+                      </div>
+                  </div>
+              </ng-container>
+          </div>
+      </div>
+  </div>
+  
+  </div>
+</div>

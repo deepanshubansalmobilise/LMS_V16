@@ -1,0 +1,230 @@
+.lms1-wrapper {
+    color: #11031B;
+    padding-top: 15px;
+    background-color: #F6F6F6;
+
+    .container {
+        max-width: 1440px;
+    }
+
+    .client_name {
+        font-weight: 600;
+        font-size: 26px;
+    }
+
+    .learn_new {
+        color: #6A6E83;
+        font-size: 14px;
+    }
+
+    .widges {
+        background-color: #fff;
+        border-radius: 6px;
+
+        .no_of_course {
+            color: #5534A5;
+            font-size: 32px;
+            font-weight: 500;
+        }
+
+        .to_do {
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .widges_heading {
+            // color: #11031B;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .progress {
+            height: 0.4rem;
+
+            .progress-bar {
+                background: #5534A5;
+                width: 50px;
+            }
+        }
+
+        .course-owned-name {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 120%;
+        }
+
+        .chapters {
+            color: #6A6E83;
+            font-size: 10px;
+            line-height: 120%;
+        }
+
+        .border-styles{
+            border: 1px solid #F3EEF6;
+            background: #FFF;
+        }
+    }
+
+
+    .latest_certi {
+        font-size: 12px;
+        color: #6A6E83;
+    }
+
+    .view_btn {
+        color: #5534A5;
+        border: 1px solid #5534A5;
+        border-radius: 4px;
+        padding: 8px 16px;
+    }
+
+    .view_btn:hover {
+        border-color: #5534A5;
+    }
+
+
+    .image_size {
+        width: 70px;
+        height: 62px;
+    }
+
+    .tabs_left,
+    .tabs,
+    .tabs_right {
+        background-color: #F4F2FF;
+    }
+
+    .tabs-anchor_tag {
+        padding: 10px 20px;
+        color: #5534A5;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        display: block;
+    }
+
+    .tabs-anchor_tag_center {
+        padding: 10px 20px;
+        text-decoration: none;
+        display: block;
+        color: #5534A5;
+        font-size: 16px;
+        font-weight: 600;
+        border-right: 1px solid #CFD1D4;
+        border-left: 1px solid #CFD1D4;
+    }
+
+    .active {
+        border-bottom: 3px solid #5534A5;
+    }
+
+    .tabs_widges {
+        border: 1px solid #F3EEF6;
+    }
+
+
+    .course_name {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .course_content {
+        color: #6A6E83;
+        font-size: 10px;
+        margin-bottom: 0;
+        margin-right: 30px;
+        position: relative;
+    }
+
+    .course_content::before {
+        content: '';
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #6A6E83;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .course_content:nth-child(2)::before {
+        left: -13px;
+    }
+
+    .course_content:nth-child(3)::before {
+        left: -13px;
+    }
+
+    .course_content:first-child::before {
+        display: none;
+    }
+
+    .course_progress {
+        color: #A0A4AB;
+        font-size: 12px;
+    }
+
+    .continue_btn {
+        color: #5534A5;
+        border: 1px solid #5534A5;
+        padding: 8px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        background-color: white;
+        border-radius: 4px;
+    }
+
+    .day {
+        font-size: 12px;
+    }
+
+    .course_for_day {
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .course_summary {
+        color: #6A6E83;
+        font-size: 12px;
+    }
+
+    .certi_name {
+        color: #6A6E83;
+        font-size: 12px;
+    }
+
+    .time {
+        font-size: 14px;
+    }
+
+    .time_duration {
+        color: #6A6E83;
+        font-size: 10px;
+    }
+
+    .start_btn {
+        color: white;
+        background-color: #5534A5;
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 14px;
+        border: 1px solid #5534A5;
+        padding: 8px 18px;
+    }
+
+    .reschedule_btn {
+        color: #5534A5;
+        background-color: white;
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 14px;
+        border: 1px solid #5534A5;
+        padding: 8px 18px;
+    }
+
+    .chart {
+        max-width: 45 0px;
+        max-height: 20px !important;
+    }
+}

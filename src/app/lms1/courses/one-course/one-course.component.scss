@@ -1,0 +1,97 @@
+.container{
+    max-width: 1440px;
+}
+
+.course {
+    color: #5534A5;
+    font-size: 14px;
+    text-decoration-line: underline;
+}
+
+.course_name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.topic_title {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.bg_white {
+    background: white;
+    border-radius: 6px;
+}
+
+.side_head {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.progress_report {
+    color: #6A6E83;
+    font-size: 14px;
+}
+
+// .accordion_btn {
+//     color: #6A6E83;
+//     font-size: 15px;
+//     line-height: 120%;
+// }
+
+.numbering {
+    line-height: 120%;
+    border: 2px solid #5534A5;
+    border-radius: 30px;
+    padding: 9px 15px;
+}
+
+.tick_img {
+    border-radius: 27px;
+    background: #EDEAF6;
+    padding: 11px 9.5px;
+}
+
+.play_img{
+    border-radius: 27px;
+    background: #fff;
+    padding: 11px 12px;
+}
+
+.course_chapter {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.course_details {
+    color: #6A6E83;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.course_time{
+font-size: 10px;
+line-height: 120%; 
+}
+
+.body_active{
+    background-color: #5534A5;
+
+    .course_chapter{
+        color: #fff;
+    }
+
+    .course_details{
+        color: #fff;
+    }
+
+    .course_time{
+        color: #fff;
+    }
+}
+
+.accordion-body{
+    cursor: pointer;
+}

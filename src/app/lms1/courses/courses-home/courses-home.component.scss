@@ -1,0 +1,130 @@
+.container{
+    max-width: 1440px;
+}
+
+.progress {
+    height: 0.4rem;
+
+    .progress-bar {
+        background: #5534A5;
+        width: 50px;
+    }
+}
+
+.badge {
+    background-color: #cbcdcf;
+    border: 1px solid #cbcdcf;
+    border-radius: 100px;
+    color: #001489;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 4px 8px;
+}
+
+
+.form-group {
+    margin: 0;
+    position: relative;
+    background-color: #EEE;
+    border-radius: 30px;
+}
+
+.form-control {
+    transition: width 0.3s ease;
+    width: 220px;
+    border-radius: 30px;
+    padding: 5px 15px;
+    height: 32px;
+    border-color: #D9D9D9;
+    display: block;
+    padding: 0.4375rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.5;
+    appearance: none;
+    background: #EEE;
+    background-clip: padding-box;
+    border: none;
+}
+
+.expanded .form-control {
+    width: 200px;
+}
+
+.form-control:focus-visible {
+    outline: none;
+}
+
+.btn-search {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: none;
+    background: none;
+    border-radius: 0 30px 30px 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item .nav-link .active{
+    background-color: none;
+    border-bottom: 2px solid #5534A5;
+}
+
+.course_content{
+    color: #6A6E83;
+    font-size: 10px;
+    margin-bottom: 0;
+    margin-right: 30px;
+    position: relative;
+}
+
+.course_content::before {
+    content: ''; /* Required for pseudo-elements */
+    display: inline-block;
+    width: 7px; /* Adjust the size of the dot */
+    height: 7px; /* Adjust the size of the dot */
+    border-radius: 50%; /* Make it a circle */
+    background-color: #6A6E83; /* Color of the dot */
+    position: absolute;
+    top: 50%; /* Adjust the position of the dot */
+    transform: translateY(-50%); /* Center the dot vertically */
+}
+
+.course_content:nth-child(2)::before {
+    left: -13px; 
+}
+.course_content:nth-child(3)::before {
+    left: -13px; 
+}
+
+.course_content:first-child::before {
+    display: none;
+}
+
+.img{
+    min-height: 228px;
+}
+
+.topic{
+    color: #6A6E83; 
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.title{
+    font-size: 16px;
+    font-weight: 500;
+    color: #11031B;
+}
+
+.completed{
+    color: #6A6E83;
+    font-size: 12px;
+}
+
+.percent{
+    color: #11031B;
+    font-size: 12px;
+}
